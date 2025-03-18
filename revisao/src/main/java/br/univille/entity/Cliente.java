@@ -8,7 +8,15 @@ public class Cliente {
     private String nome; //ctrl ponto
     private String endereco;
 
-    private ArrayList listapokemon;
+    private ArrayList listapokemon = new ArrayList();
+
+    public ArrayList getListapokemon() {
+        return listapokemon;
+    }
+
+    public void setListapokemon(ArrayList listapokemon) {
+        this.listapokemon = listapokemon;
+    }
 
     private Cidade cidade;
 
@@ -63,14 +71,6 @@ public class Cliente {
 
     public void setCidade(Cidade cidade) {
         this.cidade = cidade;
-    }
-
-    public ArrayList getListapokemon() {
-        return listapokemon;
-    }
-
-    public void setListapokemon(ArrayList listapokemon) {
-        this.listapokemon = listapokemon;
     }
 }
 
