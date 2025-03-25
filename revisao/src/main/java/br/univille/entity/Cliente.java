@@ -5,51 +5,51 @@ import java.util.ArrayList;
 public class Cliente {
     //variável - atributo
     private long id;
-    private String nome; //ctrl ponto
+    private String nome;
     private String endereco;
+    
+    private ArrayList listaPokemon = new ArrayList();
 
-    private ArrayList listapokemon = new ArrayList();
-
-    public ArrayList getListapokemon() {
-        return listapokemon;
+    public ArrayList getListaPokemon() {
+        return listaPokemon;
     }
-
-    public void setListapokemon(ArrayList listapokemon) {
-        this.listapokemon = listapokemon;
+    public void setListaPokemon(ArrayList listaPokemon) {
+        this.listaPokemon = listaPokemon;
     }
 
     private Cidade cidade;
 
+    public Cidade getCidade() {
+        return cidade;
+    }
+    public void setCidade(Cidade cidade) {
+        this.cidade = cidade;
+    }
     public long getId() {
         return id;
     }
-
     public void setId(long id) {
         this.id = id;
     }
-
     public String getEndereco() {
         return endereco;
     }
-
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
-
-    //ctor - cria um método - construtor
-    //inicializar atrubutos
-    //obrigar a passagem de valores
+    //construtor - mesmo nome da classe e não te retorno
+    // inicializar atributos
+    // obrigar a passagem de valores
     public Cliente(String nome) {
         this.nome = nome;
     }
-    
-    //polimorfismo - várias formas de existir a mesma coisa (torna opcional)
+    //polimorfismo - várias formas de existir a mesma coisa
     public Cliente() {
         
     }
-
     //método
-    //sobreescrita
+    //sobreescrita de método (meu pai 
+    //me deu pronto e eu zuera reescrevi)
     @Override
     public String toString(){
         return getNome();
@@ -63,15 +63,6 @@ public class Cliente {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    //Encapsulamento = esconder a implementação do objeto
-
-    public Cidade getCidade() {
-        return cidade;
-    }
-
-    public void setCidade(Cidade cidade) {
-        this.cidade = cidade;
-    }
+    //encapsulamento = esconder a 
+    // implementação dentro do objeto
 }
-
-//classe é uma forma para criar coisas - podemos modar como queremos
