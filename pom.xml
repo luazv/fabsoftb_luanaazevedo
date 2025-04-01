@@ -11,6 +11,7 @@
 
     <modules>
         <module>revisao</module>
+        <module>projetofabsoftmapaasia</module>
     </modules>
 
 </project>

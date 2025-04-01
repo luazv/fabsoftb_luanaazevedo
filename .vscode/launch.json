@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ProjetofabsoftmapaasiaApplication<projetofabsoftmapaasia>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.univille.projetofabsoftmapaasia.ProjetofabsoftmapaasiaApplication",
+            "projectName": "projetofabsoftmapaasia",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
