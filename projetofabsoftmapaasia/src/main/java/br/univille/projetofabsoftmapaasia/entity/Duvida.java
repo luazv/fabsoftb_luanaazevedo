@@ -1,11 +1,11 @@
 package br.univille.projetofabsoftmapaasia.entity;
 
 public class Duvida {
-    private Long id;
+    private long id;
     private String conteudo;
 
     // Getters and Setters
-    public Long getId() {
+    public long getId() {
         return id;
     }
     public void setId(Long id) {
