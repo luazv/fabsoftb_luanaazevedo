@@ -1,5 +1,10 @@
 package br.univille.projetofabsoftmapaasia.repository;
 
-public class UsuarioRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import br.univille.projetofabsoftmapaasia.entity.Usuario;
+
+public interface UsuarioRepository extends JpaRepository<Usuario,Long>{
+
     
 }

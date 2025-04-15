@@ -28,16 +28,21 @@ public class UsuarioServiceIpl implements UsuarioService {
 
     @Override
     public Usuario getUsuarioById(Long id) {
-        return repository.getById(id);
+        var retorno = repository.findById(id);
+        if (retorno.isPresent()) {
+            return retorno.get();
+        } else {
+            return null;
+        }
     }
 
     @Override
     public Usuario delete(Long id) {
-        var usuario = getById(id);
+        var usuario = getUsuarioById(id);
         if (usuario != null) {
             repository.deleteById(id);
-        return null;
         }
+        return usuario;
     }
 
 }
