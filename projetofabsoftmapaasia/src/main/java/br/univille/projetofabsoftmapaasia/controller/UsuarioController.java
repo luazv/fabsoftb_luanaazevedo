@@ -36,6 +36,11 @@ public class UsuarioController {
         if(usuario == null){
             return ResponseEntity.badRequest().build();
         }
+        if(usuario.getId() ==0){
+            service.save(usuario);
+            return new ResponseEntity<Usuario>(usuario, HttpStatus.OK);
+        }
+        return ResponseEntity.badRequest().build();
     }
 
 }
