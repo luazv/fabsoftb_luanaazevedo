@@ -14,3 +14,14 @@ Content-Type: application/json
     "dataNascimento": "2025-04-15"
 }
 
+### API USUARIO - PUT PUT http://localhost:8080/api/v1/usuario/1 Content-Type: application/json
+
+{
+"nome": "maria da silva",
+"email": "mari.com.br", 
+"endereco": "rua lalalalalla 100", 
+"telefone": "5555-1234",
+"dataNascimento": "2025-04-15"
+}
+
+### API USUARIO - DELETE DELETE http://localhost:8080/api/v1/usuario/1 Content-Type: application/json

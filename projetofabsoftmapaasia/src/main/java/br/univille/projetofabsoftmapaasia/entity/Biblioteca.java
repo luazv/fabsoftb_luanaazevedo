@@ -3,12 +3,12 @@ package br.univille.projetofabsoftmapaasia.entity;
 import java.util.List;
 
 public class Biblioteca {
-    private Long id;
+    private long id;
     private String nome;
     private List<String> materiais;
 
     // Getters and Setters
-    public Long getId() {
+    public long getId() {
         return id;
     }
     public void setId(Long id) {

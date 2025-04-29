@@ -1,13 +1,13 @@
 package br.univille.projetofabsoftmapaasia.entity;
 
 public class Igreja {
-    private Long id;
+    private long id;
     private String nome;
     private String origem;
     private String significado;
 
     // Getters and Setters
-    public Long getId() {
+    public long getId() {
         return id;
     }
     public void setId(Long id) {

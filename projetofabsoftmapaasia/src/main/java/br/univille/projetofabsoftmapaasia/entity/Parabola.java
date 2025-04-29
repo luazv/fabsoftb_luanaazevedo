@@ -1,12 +1,12 @@
 package br.univille.projetofabsoftmapaasia.entity;
 
 public class Parabola {
-    private Long id;
+    private long id;
     private String titulo;
     private String texto;
 
     // Getters and Setters
-    public Long getId() {
+    public long getId() {
         return id;
     }
     public void setId(Long id) {

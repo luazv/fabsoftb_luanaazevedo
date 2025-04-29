@@ -3,12 +3,12 @@ package br.univille.projetofabsoftmapaasia.entity;
 import java.util.List;
 
 public class Mapa {
-    private Long id;
+    private long id;
     private String nome;
     private List<Igreja> igrejas;
 
     // Getters and Setters
-    public Long getId() {
+    public long getId() {
         return id;
     }
     public void setId(Long id) {

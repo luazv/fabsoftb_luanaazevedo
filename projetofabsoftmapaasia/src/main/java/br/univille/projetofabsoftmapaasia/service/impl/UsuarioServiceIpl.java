@@ -9,6 +9,7 @@ import br.univille.projetofabsoftmapaasia.entity.Usuario;
 import br.univille.projetofabsoftmapaasia.repository.UsuarioRepository;
 import br.univille.projetofabsoftmapaasia.service.UsuarioService;
 
+@Service
 public class UsuarioServiceIpl implements UsuarioService {
 
     @Autowired

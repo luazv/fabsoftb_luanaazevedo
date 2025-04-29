@@ -5,7 +5,7 @@ import java.util.List;
 import br.univille.projetofabsoftmapaasia.entity.Usuario;
 
 public interface UsuarioService {
-    Usuario save(Usuario usuario);
+    Usuario save(Object usuarioAntigo);
     List<Usuario> getAll();
     Usuario getUsuarioById(Long id);
     Usuario delete (Long id);
