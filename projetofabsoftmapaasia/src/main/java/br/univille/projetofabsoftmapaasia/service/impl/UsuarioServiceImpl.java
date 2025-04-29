@@ -10,7 +10,7 @@ import br.univille.projetofabsoftmapaasia.repository.UsuarioRepository;
 import br.univille.projetofabsoftmapaasia.service.UsuarioService;
 
 @Service
-public class UsuarioServiceIpl implements UsuarioService {
+public class UsuarioServiceImpl implements UsuarioService {
 
     @Autowired
     private UsuarioRepository repository;
@@ -46,5 +46,7 @@ public class UsuarioServiceIpl implements UsuarioService {
         }
         return usuario;
     }
+
+    
 
 }

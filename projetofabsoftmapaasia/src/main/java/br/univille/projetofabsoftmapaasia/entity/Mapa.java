@@ -2,10 +2,24 @@ package br.univille.projetofabsoftmapaasia.entity;
 
 import java.util.List;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+
+@Entity
 public class Mapa {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String nome;
-    private List<Igreja> igrejas;
+
+    @ManyToMany
+    private List<Igreja> igrejas; // Associação com Igrejas
+
+    @ManyToMany
+    private List<Parabola> parabolas; // Associação com Parabolas
 
     // Getters and Setters
     public long getId() {
@@ -25,5 +39,11 @@ public class Mapa {
     }
     public void setIgrejas(List<Igreja> igrejas) {
         this.igrejas = igrejas;
+    }
+    public List<Parabola> getParabolas() {
+        return parabolas;
+    }
+    public void setParabolas(List<Parabola> parabolas) {
+        this.parabolas = parabolas;
     }
 }
