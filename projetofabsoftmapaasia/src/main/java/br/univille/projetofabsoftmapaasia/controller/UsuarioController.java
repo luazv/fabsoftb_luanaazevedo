@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.univille.projetofabsoftmapaasia.entity.Usuario;
-import br.univille.projetofabsoftmapaasia.entity.Usuario;
 import br.univille.projetofabsoftmapaasia.service.UsuarioService;
 
 @RestController
