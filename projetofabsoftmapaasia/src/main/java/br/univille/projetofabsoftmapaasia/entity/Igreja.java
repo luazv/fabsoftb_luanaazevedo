@@ -1,9 +1,12 @@
 package br.univille.projetofabsoftmapaasia.entity;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 
 @Entity
 public class Igreja {
@@ -13,6 +16,9 @@ public class Igreja {
     private String nome;
     private String origem;
     private String significado;
+
+    @ManyToMany
+    private List<Parabola> parabolas; // Associação com Parabola
 
     // Getters and Setters
     public long getId() {
@@ -38,5 +44,11 @@ public class Igreja {
     }
     public void setSignificado(String significado) {
         this.significado = significado;
+    }
+    public List<Parabola> getParabolas() {
+        return parabolas;
+    }
+    public void setParabolas(List<Parabola> parabolas) {
+        this.parabolas = parabolas;
     }
 }
