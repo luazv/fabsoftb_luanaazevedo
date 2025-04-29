@@ -17,6 +17,7 @@ public class UsuarioServiceIpl implements UsuarioService {
 
     @Override
     public Usuario save(Usuario usuario) {
+        
         repository.save(usuario);
         return usuario;
         

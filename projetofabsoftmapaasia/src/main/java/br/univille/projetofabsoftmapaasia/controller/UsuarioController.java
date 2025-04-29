@@ -51,7 +51,7 @@ public class UsuarioController {
         if(id <= 0 || usuario == null){
             return ResponseEntity.badRequest().build();
         }
-        var usuarioAntigo = service.getById(id);
+        var usuarioAntigo = service.getUsuarioById(id);
         if(usuarioAntigo == null){
             return ResponseEntity.notFound().build();
         }
@@ -61,9 +61,8 @@ public class UsuarioController {
         usuarioAntigo.setEmail(usuario.getEmail());
         usuarioAntigo.setDataNascimento(usuario.getDataNascimento());
 
-        service.save( usuarioAntigo);
-        return new ResponseEntity<Usuario>( usuarioAntigo,
-                HttpStatus.OK);
+        service.save(usuarioAntigo);
+        return new ResponseEntity<Usuario>(usuarioAntigo, HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
@@ -72,7 +71,7 @@ public class UsuarioController {
             return ResponseEntity.badRequest().build();
         }
 
-        var usuarioExcluido = service.getById(id);
+        var usuarioExcluido = service.getUsuarioById(id);
         if(usuarioExcluido == null){
             return ResponseEntity.notFound().build();
         }
