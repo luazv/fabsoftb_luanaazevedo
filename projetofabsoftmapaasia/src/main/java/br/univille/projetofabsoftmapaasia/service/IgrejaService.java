@@ -6,8 +6,8 @@ import br.univille.projetofabsoftmapaasia.entity.Usuario;
 import br.univille.projetofabsoftmapaasia.entity.Igreja; // Importação da classe Parabola
 
 public interface IgrejaService {
-    Usuario save(Igreja igrejaAntigo);
+    Igreja save(Igreja igrejaAntigo);
     List<Usuario> getAll();
-    Usuario getUsuarioById(Long id);
-    Usuario delete(Long id);
+    Igreja getUsuarioById(Long id);
+    Igreja delete(Long id);
 }

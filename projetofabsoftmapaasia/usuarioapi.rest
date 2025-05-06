@@ -7,20 +7,24 @@ Content-Type: application/json
 
 {
     "id": 0,
-    "nome": "lua",
-    "email": "lua@123",
-    "endereco": "rua abc",
+    "nome": "professor",
+    "email": "professor@123",
+    "endereco": "rua bhgd",
     "telefone": "3344-8876",
-    "dataNascimento": "2025-04-15"
+    "dataNascimento": "2025-04-19"
 }
+### API USUARIO - PUT PUT http://localhost:8080/api/v1/usuario/1 Content-Type: application/json
+
+PUT http://localhost:8080/api/v1/usuario
+Content-Type: application/json
 
 {
     "id": 0,
-    "nome": "luluzinha",
-    "email": "luluzinha@321",
-    "endereco": "rua dbv",
-    "telefone": "9999-5567",
-    "dataNascimento": "2025-04-15"
+    "nome": "professor",
+    "email": "professor@123",
+    "endereco": "rua bhgd",
+    "telefone": "3344-8876",
+    "dataNascimento": "2025-04-19"
 }
 
 ### API USUARIO - PUT PUT http://localhost:8080/api/v1/usuario/1 Content-Type: application/json
