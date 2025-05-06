@@ -14,6 +14,15 @@ Content-Type: application/json
     "dataNascimento": "2025-04-15"
 }
 
+{
+    "id": 0,
+    "nome": "luluzinha",
+    "email": "luluzinha@321",
+    "endereco": "rua dbv",
+    "telefone": "9999-5567",
+    "dataNascimento": "2025-04-15"
+}
+
 ### API USUARIO - PUT PUT http://localhost:8080/api/v1/usuario/1 Content-Type: application/json
 
 {

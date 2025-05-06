@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FrmMain",
+            "request": "launch",
+            "mainClass": "br.univille.view.FrmMain",
+            "projectName": "revisao"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-ProjetofabsoftmapaasiaApplication<projetofabsoftmapaasia>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
