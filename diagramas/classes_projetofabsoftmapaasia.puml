@@ -1,0 +1,145 @@
+@startuml
+package br.univille.projetofabsoftmapaasia {
+    class Usuario {
+        - long id
+        - String nome
+        - String email
+        - String senha
+        - String endereco
+        - String telefone
+        - LocalDate dataNascimento
+
+        + get Nome(): String
+        + set Nome(nome: String): void
+        + get Email(): String   
+        + set Email(email: String): void
+        + get Senha(): String
+        + set Senha(senha: String): void
+        + get Endereco(): String
+        + set Endereco(endereco: String): void
+        + get Telefone(): String
+        + set Telefone(telefone: String): void
+        + get DataNascimento(): LocalDate
+        + set DataNascimento(dataNascimento: LocalDate): void
+    }
+
+    class Igreja {
+        - long id
+        - String nome
+        - String origem
+        - String significado
+        - List<Parabola> parabolas
+
+        + get Nome(): String
+        + set Nome(nome: String): void
+        + get Origem(): String
+        + set Origem(origem: String): void
+        + get Significado(): String
+        + set Significado(significado: String): void
+        + get Parabolas(): List<Parabola>
+        + set Parabolas(parabolas: List<Parabola>): void
+        + get Id(): long
+        + set Id(id: long): void
+    }
+
+    class Parabola {
+        - long id
+        - String titulo
+        - String texto
+        - Usuario usuario
+        - List<Igreja> igrejas
+
+        + get Titulo(): String
+        + set Titulo(titulo: String): void
+        + get Texto(): String
+        + set Texto(texto: String): void
+        + get Usuario(): Usuario
+        + set Usuario(usuario: Usuario): void
+        + get Igrejas(): List<Igreja>
+        + set Igrejas(igrejas: List<Igreja>): void
+        + get Id(): long
+        + set Id(id: long): void
+    }
+
+    class Mapa {
+        - long id
+        - String nome
+        - List<Igreja> igrejas
+        - List<Parabola> parabolas
+
+        + get Nome(): String
+        + set Nome(nome: String): void
+        + get Igrejas(): List<Igreja>
+        + set Igrejas(igrejas: List<Igreja>): void
+        + get Parabolas(): List<Parabola>
+        + set Parabolas(parabolas: List<Parabola>): void
+        + get Id(): long
+        + set Id(id: long): void
+    }
+
+    class Contribuicao {
+        - long id
+        - String conteudo
+        - Usuario usuario
+        - Parabola parabola
+
+        + get Conteudo(): String
+        + set Conteudo(conteudo: String): void
+        + get Usuario(): Usuario
+        + set Usuario(usuario: Usuario): void
+        + get Parabola(): Parabola
+        + set Parabola(parabola: Parabola): void
+        + get Id(): long
+        + set Id(id: long): void
+    }
+
+    class Duvida {
+        - long id
+        - String conteudo
+        - Usuario usuario
+
+        + get Conteudo(): String
+        + set Conteudo(conteudo: String): void
+        + get Usuario(): Usuario
+        + set Usuario(usuario: Usuario): void
+        + get Id(): long
+        + set Id(id: long): void
+    }
+
+    class Resumo {
+        - long id
+        - String conteudo
+        - Igreja igreja
+
+        + get Conteudo(): String
+        + set Conteudo(conteudo: String): void
+        + get Igreja(): Igreja
+        + set Igreja(igreja: Igreja): void
+        + get Id(): long
+        + set Id(id: long): void
+    }
+
+    class Biblioteca {
+        - long id
+        - String nome
+        - List<String> materiais
+
+        + get Nome(): String
+        + set Nome(nome: String): void
+        + get Materiais(): List<String>
+        + set Materiais(materiais: List<String>): void
+        + get Id(): long
+        + set Id(id: long): void
+    }
+
+    Usuario "1" --> "*" Contribuicao
+    Usuario "1" --> "*" Duvida
+    Usuario "1" --> "*" Parabola
+    Igreja "1" --> "*" Resumo
+    Igreja "*" --> "*" Parabola
+    Mapa "*" --> "*" Igreja
+    Mapa "*" --> "*" Parabola
+    Parabola "*" --> "*" Igreja
+    Contribuicao "*" --> "1" Parabola
+}
+@enduml
