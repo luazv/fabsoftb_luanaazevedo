@@ -17,6 +17,11 @@ export class UsuarioComponent {
   constructor(private usuarioService: UsuarioService) {}
 
   ngOnInit(){
-    
+    console.log("Carregando usuarios...");
+    this.usuarioService.getUsuarios().subscribe(
+      usuarios => {
+        this.listaUsuarios = usuarios;
+      }
+    )
   }
 }
