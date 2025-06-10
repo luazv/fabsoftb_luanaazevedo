@@ -1,12 +1,16 @@
 <main class="container">
-    <h2>Usuarios</h2>
+    <h2>Usuários</h2>
+
+    <a routerLink="/usuarios/novo" class="btn btn-primary">Novo</a>
     <table class="table">
         <thead>
-            <tr>Nome</tr>
-            <tr>Endereço</tr>
-            <tr>Telefone</tr>
-            <tr>E-mail</tr>
-            <tr>Data Nascimento</tr>
+            <tr>
+                <th>Nome</th>
+                <th>Endereço</th>
+                <th>Telefone</th>
+                <th>E-mail</th>
+                <th>Data Nascimento</th>
+            </tr>
         </thead>
         <tbody>
             <tr *ngFor="let umUsuario of listaUsuarios">
