@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
 import { UsuarioComponent } from './usuario/usuario.component';
-import { FormUsuarioComponent } from '@angular/forms';
+import { FormUsuarioComponent } from './form-usuario/form-usuario.component';
 
 export const routes: Routes = [
-    {path: 'usuarios', component: UsuarioComponent}
-    {path: 'usuarios/novo', component: FormuUsuarioComponent}
+    { path: 'usuarios', component: UsuarioComponent},
+    { path: 'usuarios/novo', component: FormUsuarioComponent},
 ];
