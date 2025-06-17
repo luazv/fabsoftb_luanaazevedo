@@ -18,7 +18,8 @@ export class FormUsuarioComponent {
 
     constructor(
       private usuarioService:UsuarioService,
-      private router:Router
+      private router:Router,
+      private activeRouter: ActivatedRoute
     ){}
 
     salvar(){
