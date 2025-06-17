@@ -20,7 +20,16 @@ export class FormUsuarioComponent {
       private usuarioService:UsuarioService,
       private router:Router,
       private activeRouter: ActivatedRoute
-    ){}
+    ){
+
+      const id = this.activeRouter.snapshot.paramMap.get('id');
+
+      if(id) {
+        this.usuarioService.getUsuarioById(id).subscribe(usuario => {
+          this.usuario = usuario;
+        })
+      }
+    }
 
     salvar(){
       this.usuarioService.saveUsuario(this.usuario)
