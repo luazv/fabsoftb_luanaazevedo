@@ -16,4 +16,8 @@ export class UsuarioService {
   saveUsuario(usuario:Usuario){
     return this.http.post(this.apiURL,usuario);
   }
+
+  getUsuarioById(id: any){
+    return this.http.get<Usuario>(this.apiURL + '/' + id);
+  }
 }

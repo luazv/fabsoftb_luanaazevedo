@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.univille.projetofabsoftmapaasia.entity.Usuario;
 import br.univille.projetofabsoftmapaasia.service.UsuarioService;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RestController
 @RequestMapping("/api/v1/usuario")
@@ -26,10 +28,18 @@ public class UsuarioController {
 
     @GetMapping
     public ResponseEntity<List<Usuario>> getUsuarios(){
-        var listausuario = service.getAll();
+        var listaUsuario = service.getAll();
 
-        return new ResponseEntity<List<Usuario>>(listausuario, HttpStatus.OK);
+        return new ResponseEntity<List<Usuario>>(listaUsuario, HttpStatus.OK);
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Usuario> getUsuarioId(@PathVariable long id){
+        var umUsuario = service.getUsuarioById(id);
+
+        return new ResponseEntity<Usuario>(umUsuario, HttpStatus.OK);
+    }
+    
 
     @PostMapping
     public ResponseEntity<Usuario> postUsuario(@RequestBody Usuario usuario){
