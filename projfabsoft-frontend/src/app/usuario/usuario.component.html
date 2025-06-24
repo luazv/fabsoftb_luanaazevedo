@@ -20,10 +20,10 @@
                 <td>{{umUsuario.endereco}}</td>
                 <td>{{umUsuario.telefone}}</td>
                 <td>{{umUsuario.email}}</td>
-                <td>{{umUsuario.dataNascimento}}</td>
+                <td>{{umUsuario.dataNascimento | date:"dd/MM/yyyy"}}</td>
 
                 <td>
-                    <a (click)="alterar(umUsuario)">
+                    <a (click)="alterar(umUsuario)"
                         class="btn btn-secondary">Alterar</a></td>
             </tr>
         </tbody>
