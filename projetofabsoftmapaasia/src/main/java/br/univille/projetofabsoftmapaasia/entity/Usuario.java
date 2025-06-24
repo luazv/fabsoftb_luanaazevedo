@@ -15,9 +15,18 @@ public class Usuario {
     private String nome;
     private String email;
     private String senha;
+    private int cpf;
     private String endereco; // Adicionado
     private String telefone; // Adicionado
     private LocalDate dataNascimento; // Adicionado
+
+
+    public int getCpf() {
+        return cpf;
+    }
+    public void setCpf(int cpf) {
+        this.cpf = cpf;
+    }
 
     // Getters and Setters
     public long getId() {
