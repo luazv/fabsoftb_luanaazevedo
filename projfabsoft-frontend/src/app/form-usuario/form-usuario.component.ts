@@ -17,7 +17,7 @@ export class FormUsuarioComponent {
     usuario: Usuario = new Usuario();
 
     constructor(
-      private usuarioService:UsuarioService,
+      private UsuarioService:UsuarioService,
       private router:Router,
       private activeRouter: ActivatedRoute
     ){
@@ -25,14 +25,14 @@ export class FormUsuarioComponent {
       const id = this.activeRouter.snapshot.paramMap.get('id');
 
       if(id) {
-        this.usuarioService.getUsuarioById(id).subscribe(usuario => {
+        this.UsuarioService.getUsuarioById(id).subscribe(usuario => {
           this.usuario = usuario;
-        })
-      }
+         })
+       }
     }
 
     salvar(){
-      this.usuarioService.saveUsuario(this.usuario)
+      this.UsuarioService.saveUsuario(this.usuario)
         .subscribe(resultado => {
             this.router.navigate(['usuarios']);
         });
