@@ -1,40 +1,41 @@
 ### API USUARIO - GET
-GET http://localhost:8080/api/v1/usuario
+GET http://localhost:8080/api/v1/usuarios
 
 ### API USUARIO - POST
-POST http://localhost:8080/api/v1/usuario
+POST http://localhost:8080/api/v1/usuarios
 Content-Type: application/json
 
 {
     "id": 0,
     "nome": "professor",
+    "cpf": "665332871",
     "email": "professor@123",
     "endereco": "rua bhgd",
     "telefone": "3344-8876",
     "dataNascimento": "2025-04-19"
 }
-### API USUARIO - PUT PUT http://localhost:8080/api/v1/usuario/1 Content-Type: application/json
+### API USUARIO - PUT PUT http://localhost:8080/api/v1/usuarios/1 Content-Type: application/json
 
-PUT http://localhost:8080/api/v1/usuario
+PUT http://localhost:8080/api/v1/usuarios
 Content-Type: application/json
 
 {
-    "id": 0,
+    "id": 1,
     "nome": "professor",
-    "email": "professor@123",
+    "email": "professor@gmail.com",
     "endereco": "rua bhgd",
     "telefone": "3344-8876",
     "dataNascimento": "2025-04-19"
 }
 
-### API USUARIO - PUT PUT http://localhost:8080/api/v1/usuario/1 Content-Type: application/json
+### API USUARIO - PUT PUT http://localhost:8080/api/v1/usuarios/1 Content-Type: application/json
 
 {
-"nome": "maria da silva",
-"email": "mari.com.br", 
-"endereco": "rua lalalalalla 100", 
-"telefone": "5555-1234",
-"dataNascimento": "2025-04-15"
+    "nome": "maria da silva",
+    "email": "mari.com.br", 
+    "endereco": "rua lalalalalla 100", 
+    "telefone": "5555-1234",
+    "dataNascimento": "2025-04-15"
 }
 
-### API USUARIO - DELETE DELETE http://localhost:8080/api/v1/usuario/1 Content-Type: application/json
+### API USUARIO - DELETE DELETE http://localhost:8080/api/v1/usuarios/1 Content-Type: application/json
